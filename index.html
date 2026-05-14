@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,14 @@
     <meta property="og:title" content="Ink Stains">
     <meta property="og:site_name" content="Ink Stains">
     <meta property="og:description" content="I find my pen braver than my mouth.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1541323421480-68513be3d209?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGlua3xlbnwwfHwwfHx8MA%3D%3D">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1541323421480-68513be3d209?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGlua3xlbnwwfHwwfHx8MA%3D%3D">
     <meta property="og:url" content="https://fearbainin.github.io/ink-stains/">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/81/81060.png">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
     <style>
@@ -22,492 +26,805 @@
             --BeBrave-img: url('https://images.unsplash.com/photo-1555797487-a1f30b5d8d55?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
             --LoveMe-img: url('https://images.unsplash.com/photo-1567244394440-157280735627?q=80&w=327&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
             --winter-img: url('https://plus.unsplash.com/premium_photo-1673491311359-8adab3cdf9fa?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHdpbnRlciUyMHRvJTIwc3ByaW5nfGVufDB8fDB8fHww');
-            --smoke-grey: #5b5f60; 
+            --FuckFriday-img: url('https://images.unsplash.com/photo-1570872626485-d8ffea69f463?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            --Lie-img: url('https://images.unsplash.com/photo-1530605290309-ebfe523e6605?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            --rebound-img: url('https://images.unsplash.com/photo-1508138221679-760a23a2285b?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            --narcosis: #3e4954;
             --insta-heart: #981a24;
         }
 
-        * { cursor: none !important; } 
+        * {
+            cursor: none !important;
+        }
 
         #custom-cursor {
-            position: fixed; width: 6px; height: 6px;
-            background: rgba(255, 255, 255, 0.8); border-radius: 50%;
-            pointer-events: none; z-index: 9999;
+            position: fixed;
+            width: 6px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
             transform: translate(-50%, -50%);
         }
 
         body {
-            margin: 0; padding: 0; min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
             background: var(--default-img) no-repeat center center fixed;
-            background-size: cover; background-color: #000;
-            font-family: 'Cormorant Garamond', serif; color: #f1f1f1;
-            display: flex; flex-direction: column; align-items: center;
+            background-size: cover;
+            background-color: #000;
+            font-family: 'Cormorant Garamond', serif;
+            color: #f1f1f1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             transition: background 1.2s ease-in-out, background-color 1.2s ease-in-out;
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
 
         .overlay {
-            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0, 0, 0, 0.6); z-index: 0; pointer-events: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+            pointer-events: none;
         }
 
-        header { position: relative; z-index: 1; text-align: center; padding: 60px 0 20px; }
-
-        h1 { 
-            font-family: 'Nosifer', cursive; 
-            font-size: 3.5rem; 
-            color: #02011aaf; 
-            margin: 0; 
-            text-shadow: 3px 3px 0px rgba(150, 150, 150, 0.2), 
-                         -1px -1px 10px rgba(255, 255, 255, 0.1);
+        header {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 60px 0 20px;
         }
-        
-        .container { 
-            position: relative; 
-            z-index: 1; 
-            width: 95%; 
-            max-width: 1200px; 
+
+        h1 {
+            font-family: 'Nosifer', cursive;
+            font-size: 3.5rem;
+            color: #02011aaf;
+            margin: 0;
+            text-shadow: 3px 3px 0px rgba(150, 150, 150, 0.2),
+                -1px -1px 10px rgba(255, 255, 255, 0.1);
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            width: 95%;
+            max-width: 1200px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
             padding: 20px 0;
         }
 
-        .poem-card { 
-            background: rgba(0,0,0,0.2);
+        .poem-card {
+            background: rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(5px);
-            border: 1px solid rgba(255,255,255,0.05);
-            padding: 25px; 
-            height: 200px; 
-            overflow: hidden; 
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            height: 200px;
+            overflow: hidden;
             transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer !important; 
+            cursor: pointer !important;
         }
 
-        .poem-card.open { 
-            height: 650px; 
+        .poem-card.open {
+            height: 650px;
             background-color: transparent;
-            overflow-y: auto; 
+            overflow-y: auto;
         }
-        
+
         .poem-card::-webkit-scrollbar {
             display: none;
         }
-        
+
         .poem-card {
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
 
-        .poem-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 25px; color: #fff; font-style: italic; }
-        .poem-line { display: block; font-size: 1.4rem; line-height: 2.2; margin-bottom: 12px; padding-left: 20px; border-left: 2px solid rgba(255,255,255,0.15); }
-
-        .stanza { margin-bottom: 30px; }
-
-        .drawer { margin-top: 30px; padding: 25px; background: rgba(0,0,0,0.75); backdrop-filter: blur(10px); border-radius: 2px; opacity: 0; transition: 0.5s; cursor: auto; }
-        
-        .poem-card.open .drawer { opacity: 1; }
-
-        .action-bar { display: flex; gap: 15px; align-items: center; margin-bottom: 20px; }
-        .icon-btn, .share-btn { background: none; border: none; color: white; font-size: 1.3rem; padding: 0; cursor: pointer !important; transition: 0.3s; }
-        .icon-btn.liked i { color: var(--insta-heart); font-weight: 900; }
-        .share-btn:hover { color: #bbb; }
-        .count-text { font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 600; margin-left: -5px; }
-
-        .comment-item { 
-            font-size: 1rem; padding: 10px 0; font-style: italic; 
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05); color: #ccc;
-            display: flex; justify-content: space-between; align-items: center;
+        .poem-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: #fff;
+            font-style: italic;
         }
-        .del-btn { background: none; border: none; color: #555; font-size: 0.8rem; padding: 5px; opacity: 0; transition: 0.3s; cursor: pointer !important;}
-        .comment-item:hover .del-btn { opacity: 1; }
-        .del-btn:hover { color: var(--insta-heart); }
 
-        input[type="text"] { width: 100%; background: none; border: none; border-bottom: 1px solid rgba(255,255,255,0.2); color: white; padding: 12px 0; font-size: 1.1rem; outline: none; margin-top: 10px; font-family: inherit; }
+        .poem-line {
+            display: block;
+            font-size: 1.4rem;
+            line-height: 2.2;
+            margin-bottom: 12px;
+            padding-left: 20px;
+            border-left: 2px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .stanza {
+            margin-bottom: 30px;
+        }
+
+        .drawer {
+            margin-top: 30px;
+            padding: 25px;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(10px);
+            border-radius: 2px;
+            opacity: 0;
+            transition: 0.5s;
+            cursor: auto;
+        }
+
+        .poem-card.open .drawer {
+            opacity: 1;
+        }
+
+        .action-bar {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .icon-btn,
+        .share-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.3rem;
+            padding: 0;
+            cursor: pointer !important;
+            transition: 0.3s;
+        }
+
+        .icon-btn.liked i {
+            color: var(--insta-heart);
+            font-weight: 900;
+        }
+
+        .share-btn:hover {
+            color: #bbb;
+        }
+
+        .count-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-left: -5px;
+        }
+
+        .comment-item {
+            font-size: 1rem;
+            padding: 10px 0;
+            font-style: italic;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: #ccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .del-btn {
+            background: none;
+            border: none;
+            color: #555;
+            font-size: 0.8rem;
+            padding: 5px;
+            opacity: 0;
+            transition: 0.3s;
+            cursor: pointer !important;
+        }
+
+        .comment-item:hover .del-btn {
+            opacity: 1;
+        }
+
+        .del-btn:hover {
+            color: var(--insta-heart);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            background: none;
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 12px 0;
+            font-size: 1.1rem;
+            outline: none;
+            margin-top: 10px;
+            font-family: inherit;
+        }
 
         #scroll-top {
-            position: fixed; bottom: 30px; right: 30px; z-index: 100;
-            background: rgba(255,255,255,0.1); backdrop-filter: blur(5px);
-            border: 1px solid rgba(255,255,255,0.2); color: white;
-            width: 40px; height: 40px; border-radius: 50%;
-            display: none; align-items: center; justify-content: center;
-            transition: 0.3s; cursor: pointer !important;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+            cursor: pointer !important;
         }
-        #scroll-top:hover { background: rgba(255,255,255,0.3); }
 
-        .footer-wrapper { position: relative; z-index: 1; width: 100%; background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(20px); border-top: 1px solid rgba(255,255,255,0.05); margin-top: 50px; padding: 40px 0 20px; }
-        .footer-content { max-width: 800px; margin: 0 auto; padding: 0 20px; text-align: center; }
-        .about-text { font-size: 1rem; color: #657805a8; margin-bottom: 15px; font-family: 'Montserrat', sans-serif; letter-spacing: 1px; }
-        .copyright { font-size: 0.7rem; letter-spacing: 3px; color: #444; text-transform: uppercase; }
-        .dedication {font-family: 'Georgia', serif; font-size: 0.9rem; color: #555; text-align: center; margin-top: 20px; border-top: 1px solid #eee; padding-top: 10px;}
+        #scroll-top:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .footer-wrapper {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 50px;
+            padding: 40px 0 20px;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .about-text {
+            font-size: 1rem;
+            color: #657805a8;
+            margin-bottom: 15px;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .copyright {
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            color: #444;
+            text-transform: uppercase;
+        }
+
+        .dedication {
+            font-family: 'Georgia', serif;
+            font-size: 0.9rem;
+            color: #555;
+            text-align: center;
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
 
         /* MOBILE RESPONSIVENESS */
         @media (max-width: 900px) {
-            .container { grid-template-columns: 1fr; max-width: 650px; gap: 50px; }
-            .poem-card { height: 180px; }
-            #custom-cursor { display: none !important; }
-            * { cursor: auto !important; }
+            .container {
+                grid-template-columns: 1fr;
+                max-width: 650px;
+                gap: 50px;
+            }
+
+            .poem-card {
+                height: 180px;
+            }
+
+            #custom-cursor {
+                display: none !important;
+            }
+
+            * {
+                cursor: auto !important;
+            }
         }
     </style>
 </head>
+
 <body>
 
-<div id="custom-cursor"></div>
-<div class="overlay"></div>
-<button id="scroll-top" onclick="window.scrollTo(0,0)"><i class="fa-solid fa-arrow-up"></i></button>
+    <div id="custom-cursor"></div>
+    <div class="overlay"></div>
+    <button id="scroll-top" onclick="window.scrollTo(0,0)"><i class="fa-solid fa-arrow-up"></i></button>
 
-<header>
-    <h1>Ink Stains</h1>
-    <p class="about-text">Yes, yes, I know. This is not ink</p>
-</header>
+    <header>
+        <h1>Ink Stains</h1>
+        <p class="about-text">Yes, yes, I know. This is not ink</p>
+    </header>
 
-<div class="container">
+    <div class="container">
 
-    <article class="poem-card" id="narcosis" onclick="togglePoem(event, 'narcosis')" onmouseenter="setHover('var(--smoke-grey)')" onmouseleave="resetHover()">
-        <h2 class="poem-title" style="color: #baa7a7;">Narcosis</h2>
-        <div class="poem-body">
-            <div class="stanza">
-                <span class="poem-line">Pain can be the ink, but too much of it burns the paper,</span>
-                <span class="poem-line">My pen has dried up — the ink within it, rather</span>
-                <span class="poem-line">My mind has become a rock — a dark hole, a dry well</span>
-                <span class="poem-line">My poet lies unconscious, how to wake her?</span>
+        <article class="poem-card" id="narcosis" onclick="togglePoem(event, 'narcosis')"
+            onmouseenter="setHover('var(--narcosis)')" onmouseleave="resetHover()">
+            <h2 class="poem-title" style="color: #000000;">Narcosis</h2>
+            <div class="poem-body">
+                <div class="stanza">
+                    <span class="poem-line">Pain can be the ink, but too much of it burns the paper,</span>
+                    <span class="poem-line">My pen has dried up — the ink within it, rather</span>
+                    <span class="poem-line">My mind has become a rock — a dark hole, a dry well</span>
+                    <span class="poem-line">My poet lies unconscious, how to wake her?</span>
+                </div>
+                <div class="stanza">
+                    <span class="poem-line">The colour of life has been rinsed from my skin</span>
+                    <span class="poem-line">My wounds are too stubborn to let words through</span>
+                    <span class="poem-line">My mouth is too busy screaming to sing any sad songs</span>
+                    <span class="poem-line">My poet lies unconscious, how to wake her?</span>
+                </div>
+                <div class="stanza">
+                    <span class="poem-line">Gravity is pulling harder on me than anyone else,</span>
+                    <span class="poem-line">My eyes are blinking too fast — my tears are all I can see</span>
+                    <span class="poem-line">My legs are waterlogged timbers walking against a tide</span>
+                    <span class="poem-line">My poet lies unconscious, how to wake her?</span>
+                </div>
+                <div class="stanza">
+                    <span class="poem-line">Cotton wool runs along all my nerves like a thick sock</span>
+                    <span class="poem-line">My wrists no longer run red when the blades kiss them</span>
+                    <span class="poem-line">My head no longer hurts when it hits the wall</span>
+                    <span class="poem-line">My poet lies unconscious, how to wake her?</span>
+                </div>
             </div>
-            <div class="stanza">
-                <span class="poem-line">The colour of life has been rinsed from my skin</span>
-                <span class="poem-line">My wounds are too stubborn to let words through</span>
-                <span class="poem-line">My mouth is too busy screaming to sing any sad songs</span>
-                <span class="poem-line">My poet lies unconscious, how to wake her?</span>
+            <div class="drawer" onclick="event.stopPropagation()">
+                <div class="action-bar">
+                    <button class="icon-btn" id="heart-narcosis" onclick="toggleHeart('narcosis')"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <span class="count-text" id="l-narcosis">0</span>
+                    <button class="share-btn" onclick="sharePoem('narcosis')"><i
+                            class="fa-solid fa-arrow-up-from-bracket"></i></button>
+                </div>
+                <div id="cl-narcosis"></div>
+                <input type="text" id="in-narcosis" placeholder="..."
+                    onkeydown="if(event.key==='Enter') addComment('narcosis')">
             </div>
-            <div class="stanza">
-                <span class="poem-line">Gravity is pulling harder on me than anyone else,</span>
-                <span class="poem-line">My eyes are blinking too fast — my tears are all I can see</span>
-                <span class="poem-line">My legs are waterlogged timbers walking against a tide</span>
-                <span class="poem-line">My poet lies unconscious, how to wake her?</span>
-            </div>
-            <div class="stanza">
-                <span class="poem-line">Cotton wool runs along all my nerves like a thick sock</span>
-                <span class="poem-line">My wrists no longer run red when the blades kiss them</span>
-                <span class="poem-line">My head no longer hurts when it hits the wall</span>
-                <span class="poem-line">My poet lies unconscious, how to wake her?</span>
-            </div>
-        </div>
-        <div class="drawer" onclick="event.stopPropagation()">
-            <div class="action-bar">
-                <button class="icon-btn" id="heart-narcosis" onclick="toggleHeart('narcosis')"><i class="fa-regular fa-heart"></i></button>
-                <span class="count-text" id="l-narcosis">0</span>
-                <button class="share-btn" onclick="sharePoem('narcosis')"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
-            </div>
-            <div id="cl-narcosis"></div>
-            <input type="text" id="in-narcosis" placeholder="..." onkeydown="if(event.key==='Enter') addComment('narcosis')">
-        </div>
-    </article>
+        </article>
 
-    <article class="poem-card" id="secret" onclick="togglePoem(event, 'secret')" onmouseenter="setHover('var(--secret-img)')" onmouseleave="resetHover()">
-        <h2 class="poem-title" style="color: #fab1a0;">February 15</h2>
-        <div class="poem-body">
-            <span class="poem-line">How many nights did I rehearse saying your name?</span>
-            <span class="poem-line">How many times have I rehearsed for 'the announcement'?</span>
-            <span class="poem-line">How many hours has my brain written the story of our hearts?</span>
-            <span class="poem-line">But you don't know the plot, you've barely skimmed the pages</span>
-            <span class="poem-line">You are writing a story for strangers' eyes, a carefully sold lie</span>
-            <span class="poem-line">You lace your fingers through hands you'll never feel</span>
-            <span class="poem-line">You keep me in the shadows, tucked behind a velvet curtain</span>
-            <span class="poem-line">I am the footnote of your life — the 'could never be'.</span>
-            <span class="poem-line">Yesterday you bought a card for him, signed it with lies</span>
-            <span class="poem-line">Yesterday he took you to dinner, he told you he loves you</span>
-            <span class="poem-line">Yesterday you posted pictures of the flowers, the chocolates, the wine</span>
-            <span class="poem-line">But I found you on my front door at the hour of lost souls today</span>
-            <span class="poem-line">I know I should have been angry, closed the door in your face</span>
-            <span class="poem-line">I am tired of being your skeleton, a dirty little secret</span>
-            <span class="poem-line">Yet I stay, tethered to a life only lived behind closed curtains</span>
-            <span class="poem-line">Is this love if it's a burden? Is it love if it is a fear?</span>
-            <span class="poem-line">Is this real if you cannot be brave enough to show them me — us?</span>
-            <span class="poem-line">Is this genuine if I'm only ever 'just a friend' — a very close friend?</span>
-            <span class="poem-line">Yes, I will be your gift when their roses are wilting and ribbons fraying</span>
-        </div>
-        <div class="drawer" onclick="event.stopPropagation()">
-            <div class="action-bar">
-                <button class="icon-btn" id="heart-secret" onclick="toggleHeart('secret')"><i class="fa-regular fa-heart"></i></button>
-                <span class="count-text" id="l-secret">0</span>
-                <button class="share-btn" onclick="sharePoem('secret')"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
+        <article class="poem-card" id="secret" onclick="togglePoem(event, 'secret')"
+            onmouseenter="setHover('var(--secret-img)')" onmouseleave="resetHover()">
+            <h2 class="poem-title" style="color: #0071b6;">February 15</h2>
+            <div class="poem-body">
+                <span class="poem-line">How many nights did I rehearse saying your name?</span>
+                <span class="poem-line">How many times have I rehearsed for 'the announcement'?</span>
+                <span class="poem-line">How many hours has my brain written the story of our hearts?</span>
+                <span class="poem-line">But you don't know the plot, you've barely skimmed the pages</span>
+                <span class="poem-line">You are writing a story for strangers' eyes, a carefully sold lie</span>
+                <span class="poem-line">You lace your fingers through hands you'll never feel</span>
+                <span class="poem-line">You keep me in the shadows, tucked behind a velvet curtain</span>
+                <span class="poem-line">I am the footnote of your life — the 'could never be'.</span>
+                <span class="poem-line">Yesterday you bought a card for him, signed it with lies</span>
+                <span class="poem-line">Yesterday he took you to dinner, he told you he loves you</span>
+                <span class="poem-line">Yesterday you posted pictures of the flowers, the chocolates, the wine</span>
+                <span class="poem-line">But I found you on my front door at the hour of lost souls today</span>
+                <span class="poem-line">I know I should have been angry, closed the door in your face</span>
+                <span class="poem-line">I am tired of being your skeleton, a dirty little secret</span>
+                <span class="poem-line">Yet I stay, tethered to a life only lived behind closed curtains</span>
+                <span class="poem-line">Is this love if it's a burden? Is it love if it is a fear?</span>
+                <span class="poem-line">Is this real if you cannot be brave enough to show them me — us?</span>
+                <span class="poem-line">Is this genuine if I'm only ever 'just a friend' — a very close friend?</span>
+                <span class="poem-line">Yes, I will be your gift when their roses are wilting and ribbons fraying</span>
             </div>
-            <div id="cl-secret"></div>
-            <input type="text" id="in-secret" placeholder="..." onkeydown="if(event.key==='Enter') addComment('secret')">
-        </div>
-    </article>
-        
-    <article class="poem-card" id="LastMail" onclick="togglePoem(event, 'LastMail')" onmouseenter="setHover('var(--LastMail-img)')" onmouseleave="resetHover()">
-        <h2 class="poem-title" style="color: #f5e6c4;">The Last Parcel</h2>
-        <div class="poem-body">
-            <div class="stanza">
-                <span class="poem-line">I mailed her a picture of us this time,</span>
-                <span class="poem-line">Dancing beneath younger stars</span>
-                <span class="poem-line">With smiles brighter than memory allows</span>
-                <span class="poem-line">No words, just a faded frame from long ago</span>
+            <div class="drawer" onclick="event.stopPropagation()">
+                <div class="action-bar">
+                    <button class="icon-btn" id="heart-secret" onclick="toggleHeart('secret')"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <span class="count-text" id="l-secret">0</span>
+                    <button class="share-btn" onclick="sharePoem('secret')"><i
+                            class="fa-solid fa-arrow-up-from-bracket"></i></button>
+                </div>
+                <div id="cl-secret"></div>
+                <input type="text" id="in-secret" placeholder="..."
+                    onkeydown="if(event.key==='Enter') addComment('secret')">
             </div>
-            <div class="stanza">
-                <span class="poem-line">Maybe she paused, overcome with nostalgia</span>
-                <span class="poem-line">tracing the face she once was fond of</span>
-                <span class="poem-line">Maybe she also plays that night in rewind,</span>
-                <span class="poem-line">like a jazz that never finds release</span>
-            </div>
-            <div class="stanza">
-                <span class="poem-line">But perhaps she stared then let it vanish</span>
-                <span class="poem-line">in that drawer she keeps for things unloved</span>
-                <span class="poem-line">Not important enough to frame for the desk</span>
-                <span class="poem-line">Just ghosts humming in the background</span>
-            </div>
-        </div>
-        <div class="drawer" onclick="event.stopPropagation()">
-            <div class="action-bar">
-                <button class="icon-btn" id="heart-LastMail" onclick="toggleHeart('LastMail')"><i class="fa-regular fa-heart"></i></button>
-                <span class="count-text" id="l-LastMail">0</span>
-                <button class="share-btn" onclick="sharePoem('LastMail')"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
-            </div>
-            <div id="cl-LastMail"></div>
-            <input type="text" id="in-LastMail" placeholder="..." onkeydown="if(event.key==='Enter') addComment('LastMail')">
-        </div>
-    </article>
-    
-    <article class="poem-card" id="BeBrave" onclick="togglePoem(event, 'BeBrave')" onmouseenter="setHover('var(--BeBrave-img)')" onmouseleave="resetHover()">
-        <h2 class="poem-title" style="color: #78132e;">Be thou bold, mine dear</h2>
-        <div class="poem-body">
-            <span class="poem-line">I spy the longing that doth cloud thine eyes,</span>
-            <span class="poem-line">whene’er thou steal’st a glance at me.</span>
-            <span class="poem-line">Though thou hid’st thee behind a veil,</span>
-            <span class="poem-line">thy thoughts lie plain as doth thy nose.</span>
-            <span class="poem-line">I behold the curious fancies born within thy mind;</span>
-            <span class="poem-line">I see them sail upon thine eyes,</span>
-            <span class="poem-line">their engines fed by passion’s raging fire.</span>
-            <span class="poem-line">Mine ears sit ready still to hear thy heart’s desire,</span>
-            <span class="poem-line">thy voice proclaiming thy burning longing.</span>
-            <span class="poem-line">Yet ever thou draw’st away, afeard—</span>
-            <span class="poem-line">frighted, thou hold’st thy tongue in check.</span>
-            <span class="poem-line">Give a voice unto the craving that doth haunt thee,</span>
-            <span class="poem-line">For love is no true love if it be not brave;</span>
-            <span class="poem-line">the heart is ne’er made whole whilst it concealeth its desire.</span>            
-        </div>
-        <div class="drawer" onclick="event.stopPropagation()">
-            <div class="action-bar">
-                <button class="icon-btn" id="heart-BeBrave" onclick="toggleHeart('BeBrave')"><i class="fa-regular fa-heart"></i></button>
-                <span class="count-text" id="l-BeBrave">0</span>
-                <button class="share-btn" onclick="sharePoem('BeBrave')"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
-            </div>
-            <div id="cl-BeBrave"></div>
-            <input type="text" id="in-BeBrave" placeholder="..." onkeydown="if(event.key==='Enter') addComment('BeBrave')">
-        </div>
-    </article>
+        </article>
 
-    <article class="poem-card" id="LoveMe" onclick="togglePoem(event, 'LoveMe')" onmouseenter="setHover('var(--LoveMe-img)')" onmouseleave="resetHover()">
-        <h2 class="poem-title" style="color: #9e339c;">I'm Tired of Guessing</h2>
-        <div class="poem-body">
-            <div class="stanza">
-                <span class="poem-line">My foolish heart flutters with every glance</span>
-                <span class="poem-line">It argues: This is a sign, this is the signal</span>
-                <span class="poem-line">But logic sits and taps her feet, annoyed —</span>
-                <span class="poem-line">"Control yourself, eye contact is not a confession"</span>
+        <article class="poem-card" id="LastMail" onclick="togglePoem(event, 'LastMail')"
+            onmouseenter="setHover('var(--LastMail-img)')" onmouseleave="resetHover()">
+            <h2 class="poem-title" style="color: #f5e6c4;">The Last Parcel</h2>
+            <div class="poem-body">
+                <div class="stanza">
+                    <span class="poem-line">I mailed her a picture of us this time,</span>
+                    <span class="poem-line">Dancing beneath younger stars</span>
+                    <span class="poem-line">With smiles brighter than memory allows</span>
+                    <span class="poem-line">No words, just a faded frame from long ago</span>
+                </div>
+                <div class="stanza">
+                    <span class="poem-line">Maybe she paused, overcome with nostalgia</span>
+                    <span class="poem-line">tracing the face she once was fond of</span>
+                    <span class="poem-line">Maybe she also plays that night in rewind,</span>
+                    <span class="poem-line">like a jazz that never finds release</span>
+                </div>
+                <div class="stanza">
+                    <span class="poem-line">But perhaps she stared then let it vanish</span>
+                    <span class="poem-line">in that drawer she keeps for things unloved</span>
+                    <span class="poem-line">Not important enough to frame for the desk</span>
+                    <span class="poem-line">Just ghosts humming in the background</span>
+                </div>
             </div>
-            <div class="stanza">
-                <span class="poem-line">You look at me, and my breath catches in my lungs</span>
-                <span class="poem-line">You brush past me, my stomach does a flip</span>
-                <span class="poem-line">You lean close to me, and the air becomes tighter</span>
-                <span class="poem-line">Your hand touches mine, God, the limerence!</span>
+            <div class="drawer" onclick="event.stopPropagation()">
+                <div class="action-bar">
+                    <button class="icon-btn" id="heart-LastMail" onclick="toggleHeart('LastMail')"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <span class="count-text" id="l-LastMail">0</span>
+                    <button class="share-btn" onclick="sharePoem('LastMail')"><i
+                            class="fa-solid fa-arrow-up-from-bracket"></i></button>
+                </div>
+                <div id="cl-LastMail"></div>
+                <input type="text" id="in-LastMail" placeholder="..."
+                    onkeydown="if(event.key==='Enter') addComment('LastMail')">
             </div>
-            <div class="stanza">
-                <span class="poem-line">Is it a clue, when you look at me then away?</span>
-                <span class="poem-line">Is it a dare, when your text is a temptation?</span>
-                <span class="poem-line">Is it a sign, when your pinky brushes my wrist?</span>
-                <span class="poem-line">Or is it just a game, when you tuck my hair?</span>
-            </div>
-              <div class="stanza">
-                <span class="poem-line">Quit the crumbs and save me this pain?</span>
-                <span class="poem-line">Tell me the words, make the answer plain</span>
-                <span class="poem-line">Am I reading between lines never written?</span>
-                <span class="poem-line">Do you dream of us like I do?</span>
-            </div>
-        </div>
-        <div class="drawer" onclick="event.stopPropagation()">
-            <div class="action-bar">
-                <button class="icon-btn" id="heart-LoveMe" onclick="toggleHeart('LoveMe')"><i class="fa-regular fa-heart"></i></button>
-                <span class="count-text" id="l-LoveMe">0</span>
-                <button class="share-btn" onclick="sharePoem('LoveMe')"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
-            </div>
-            <div id="cl-LoveMe"></div>
-            <input type="text" id="in-LoveMe" placeholder="..." onkeydown="if(event.key==='Enter') addComment('LoveMe')">
-        </div>
-    </article>
+        </article>
 
-    <article class="poem-card" id="winter" onclick="togglePoem(event, 'winter')" onmouseenter="setHover('var(--winter-img)')" onmouseleave="resetHover()">
-        <h2 class="poem-title" style="color: #f2ededf5;">Take me with you to spring?</h2>
-        <div class="poem-body">
-            <span class="poem-line">Would you still kiss my cracked, thirsty lips if love clung to them like frost?</span>
-            <span class="poem-line">Or will you turn away from the tundra you'll think I am, too barren to grow us?</span>
-            <span class="poem-line">Or will you let the snow that'll fall tomorrow kill the angels we made tonight?</span>
-            <span class="poem-line">Or will you let the hearth choke on its own ash, gasping for the heat that was used to us?</span>
-            <span class="poem-line">Or will you keep your hands in your pockets, refusing the warmth that mine offer?</span>
-            <span class="poem-line">Or will you let the tracks we left in the drifts be filled by the gale before morning comes?</span>
-            <span class="poem-line">Are we just a story that is only present in the dreams of winter hibernations?</span>
-            <span class="poem-line">Are we just a coat that you'll shed off once the spring brings its warmth?</span>
-            <span class="poem-line">Are we just a shiver you'll shake off, eager to embrace the breeze of sweet air?</span>
-            <span class="poem-line">Are we just a fog you will happily let disappear in the crisp morning sun?</span>
-            <span class="poem-line">Are we just a radiator you'll put away once the sun brings its warmth?</span>
-            <span class="poem-line">Take me with you to spring, please</span>
-          </div>
-        <div class="drawer" onclick="event.stopPropagation()">
-            <div class="action-bar">
-                <button class="icon-btn" id="heart-winter" onclick="toggleHeart('winter')"><i class="fa-regular fa-heart"></i></button>
-                <span class="count-text" id="l-winter">0</span>
-                <button class="share-btn" onclick="sharePoem('winter')"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
+        <article class="poem-card" id="BeBrave" onclick="togglePoem(event, 'BeBrave')"
+            onmouseenter="setHover('var(--BeBrave-img)')" onmouseleave="resetHover()">
+            <h2 class="poem-title" style="color: #78132e;">Be thou bold, mine dear</h2>
+            <div class="poem-body">
+                <span class="poem-line">I spy the longing that doth cloud thine eyes,</span>
+                <span class="poem-line">whene’er thou steal’st a glance at me.</span>
+                <span class="poem-line">Though thou hid’st thee behind a veil,</span>
+                <span class="poem-line">thy thoughts lie plain as doth thy nose.</span>
+                <span class="poem-line">I behold the curious fancies born within thy mind;</span>
+                <span class="poem-line">I see them sail upon thine eyes,</span>
+                <span class="poem-line">their engines fed by passion’s raging fire.</span>
+                <span class="poem-line">Mine ears sit ready still to hear thy heart’s desire,</span>
+                <span class="poem-line">thy voice proclaiming thy burning longing.</span>
+                <span class="poem-line">Yet ever thou draw’st away, afeard—</span>
+                <span class="poem-line">frighted, thou hold’st thy tongue in check.</span>
+                <span class="poem-line">Give a voice unto the craving that doth haunt thee,</span>
+                <span class="poem-line">For love is no true love if it be not brave;</span>
+                <span class="poem-line">the heart is ne’er made whole whilst it concealeth its desire.</span>
             </div>
-            <div id="cl-winter"></div>
-            <input type="text" id="in-winter" placeholder="..." onkeydown="if(event.key==='Enter') addComment('winter')">
-        </div>
-    </article>
+            <div class="drawer" onclick="event.stopPropagation()">
+                <div class="action-bar">
+                    <button class="icon-btn" id="heart-BeBrave" onclick="toggleHeart('BeBrave')"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <span class="count-text" id="l-BeBrave">0</span>
+                    <button class="share-btn" onclick="sharePoem('BeBrave')"><i
+                            class="fa-solid fa-arrow-up-from-bracket"></i></button>
+                </div>
+                <div id="cl-BeBrave"></div>
+                <input type="text" id="in-BeBrave" placeholder="..."
+                    onkeydown="if(event.key==='Enter') addComment('BeBrave')">
+            </div>
+        </article>
 
-</div>
+        <article class="poem-card" id="LoveMe" onclick="togglePoem(event, 'LoveMe')"
+            onmouseenter="setHover('var(--LoveMe-img)')" onmouseleave="resetHover()">
+            <h2 class="poem-title" style="color: #9e339c;">I'm Tired of Guessing</h2>
+            <div class="poem-body">
+                <div class="stanza">
+                    <span class="poem-line">My foolish heart flutters with every glance</span>
+                    <span class="poem-line">It argues: This is a sign, this is the signal</span>
+                    <span class="poem-line">But logic sits and taps her feet, annoyed —</span>
+                    <span class="poem-line">"Control yourself, eye contact is not a confession"</span>
+                </div>
+                <div class="stanza">
+                    <span class="poem-line">You look at me, and my breath catches in my lungs</span>
+                    <span class="poem-line">You brush past me, my stomach does a flip</span>
+                    <span class="poem-line">You lean close to me, and the air becomes tighter</span>
+                    <span class="poem-line">Your hand touches mine, God, the limerence!</span>
+                </div>
+                <div class="stanza">
+                    <span class="poem-line">Is it a clue, when you look at me then away?</span>
+                    <span class="poem-line">Is it a dare, when your text is a temptation?</span>
+                    <span class="poem-line">Is it a sign, when your pinky brushes my wrist?</span>
+                    <span class="poem-line">Or is it just a game, when you tuck my hair?</span>
+                </div>
+                <div class="stanza">
+                    <span class="poem-line">Quit the crumbs and save me this pain?</span>
+                    <span class="poem-line">Tell me the words, make the answer plain</span>
+                    <span class="poem-line">Am I reading between lines never written?</span>
+                    <span class="poem-line">Do you dream of us like I do?</span>
+                </div>
+            </div>
+            <div class="drawer" onclick="event.stopPropagation()">
+                <div class="action-bar">
+                    <button class="icon-btn" id="heart-LoveMe" onclick="toggleHeart('LoveMe')"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <span class="count-text" id="l-LoveMe">0</span>
+                    <button class="share-btn" onclick="sharePoem('LoveMe')"><i
+                            class="fa-solid fa-arrow-up-from-bracket"></i></button>
+                </div>
+                <div id="cl-LoveMe"></div>
+                <input type="text" id="in-LoveMe" placeholder="..."
+                    onkeydown="if(event.key==='Enter') addComment('LoveMe')">
+            </div>
+        </article>
 
-<div class="footer-wrapper">
-    <div class="footer-content">
-        <p class="about-text">I find my pen braver than my mouth</p>
-        <p class="dedication">Dedicated to Karuma🙄🙄</p>
-        <div class="copyright">&copy; 2026 INK STAINS</div>
+        <article class="poem-card" id="winter" onclick="togglePoem(event, 'winter')"
+            onmouseenter="setHover('var(--winter-img)')" onmouseleave="resetHover()">
+            <h2 class="poem-title" style="color: #f2ededf5;">Take me with you to spring?</h2>
+            <div class="poem-body">
+                <span class="poem-line">Would you still kiss my cracked, thirsty lips if love clung to them like frost?</span>
+                <span class="poem-line">Or will you turn away from the tundra you'll think I am, too barren to grow us?</span>
+                <span class="poem-line">Or will you let the snow that'll fall tomorrow kill the angels we made tonight?</span>
+                <span class="poem-line">Or will you let the hearth choke on its own ash, gasping for the heat that was used to us?</span>
+                <span class="poem-line">Or will you keep your hands in your pockets, refusing the warmth that mine offer?</span>
+                <span class="poem-line">Or will you let the tracks we left in the drifts be filled by the gale before morning comes?</span>
+                <span class="poem-line">Are we just a story that is only present in the dreams of winter hibernations?</span>
+                <span class="poem-line">Are we just a coat that you'll shed off once the spring brings its warmth?</span>
+                <span class="poem-line">Are we just a shiver you'll shake off, eager to embrace the breeze of sweet air?</span>
+                <span class="poem-line">Are we just a fog you will happily let disappear in the crisp morning sun?</span>
+                <span class="poem-line">Are we just a radiator you'll put away once the sun brings its warmth?</span>
+                <span class="poem-line">Take me with you to spring, please</span>
+            </div>
+            <div class="drawer" onclick="event.stopPropagation()">
+                <div class="action-bar">
+                    <button class="icon-btn" id="heart-winter" onclick="toggleHeart('winter')"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <span class="count-text" id="l-winter">0</span>
+                    <button class="share-btn" onclick="sharePoem('winter')"><i
+                            class="fa-solid fa-arrow-up-from-bracket"></i></button>
+                </div>
+                <div id="cl-winter"></div>
+                <input type="text" id="in-winter" placeholder="..."
+                    onkeydown="if(event.key==='Enter') addComment('winter')">
+            </div>
+        </article>
+
+        <article class="poem-card" id="FuckFriday" onclick="togglePoem(event, 'FuckFriday')"
+            onmouseenter="setHover('var(--FuckFriday-img)')" onmouseleave="resetHover()">
+            <h2 class="poem-title" style="color: #1eff00;">Fuck Friday</h2>
+            <div class="poem-body">
+                <span class="poem-line">Another Friday, another death wish</span>
+                <span class="poem-line">Do you hear the clinking of glasses in the ground floor bar?</span>
+                <span class="poem-line">Will you hear my skull crack when it hits the pavement?</span>
+                <span class="poem-line">Will you hear my roof as it creaks to bear my weight?</span>
+                <span class="poem-line">Do you hear the shouting from the game night next door?</span>
+                <span class="poem-line">Will you hear my hyperventilation with plastic over my face?</span>
+                <span class="poem-line">Will you hear the water when the tub overflows like a plagued Nile?</span>
+                <span class="poem-line">Do you hear the fireworks from the party on the rooftop?</span>
+                <span class="poem-line">Will you hear the squelch when the knife penetrates my skin?</span>
+                <span class="poem-line">Will you hear my stove as the charcoal pops and cracks?</span>
+                <span class="poem-line"><em>Are you humming? —</em></span>
+                <span class="poem-line"><em>Do you hear that ringing too?</em></span>
+                <span class="poem-line"><em>Did I take too much aspirin?</em></span>
+                
+            </div>
+            <div class="drawer" onclick="event.stopPropagation()">
+                <div class="action-bar">
+                    <button class="icon-btn" id="heart-FuckFriday" onclick="toggleHeart('FuckFriday')"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <span class="count-text" id="l-FuckFriday">0</span>
+                    <button class="share-btn" onclick="sharePoem('FuckFriday')"><i
+                            class="fa-solid fa-arrow-up-from-bracket"></i></button>
+                </div>
+                <div id="cl-FuckFriday"></div>
+                <input type="text" id="in-FuckFriday" placeholder="..."
+                    onkeydown="if(event.key==='Enter') addComment('FuckFriday')">
+            </div>
+        </article>
+
+        <article class="poem-card" id="Lie" onclick="togglePoem(event, 'Lie')"
+            onmouseenter="setHover('var(--Lie-img)')" onmouseleave="resetHover()">
+            <h2 class="poem-title" style="color: #b9b2c3;">What A Lie</h2>
+            <div class="poem-body">
+                <div class="stanza">
+                    <span class="poem-line">It shouldn't hurt this much to lose nothing</span>
+                    <span class="poem-line">You left me on the road to our something</span>
+                    <span class="poem-line">with no goodbye, without even a word</span>
+                    <span class="poem-line">I called after you, but you didn't even spare a glance</span>
+                    <span class="poem-line">Stranded, with one half of a map</span>
+                </div>
+                <div class="stanza">
+                    <span class="poem-line">Six months, six full months of shared playlists</span>
+                    <span class="poem-line">a soundtrack for a movie that never made it to production</span>
+                    <span class="poem-line">Befitting, I presume: half a year, half something</span>
+                </div>
+                <div class="stanza">
+                    <span class="poem-line">You gave me your texts like drugs, and I grew addicted</span>
+                    <span class="poem-line">Chasing the dopamine of your customized chime</span>
+                    <span class="poem-line">Now I check your chat still; starving, craving, yearning</span>
+                    <span class="poem-line">Have some compassion—</span>
+                    <span class="poem-line">Withdrawal must be gradual, not sudden</span>
+                </div>
+                 <div class="stanza">
+                    <span class="poem-line">You took me so high up, just to push me back down</span>
+                    <span class="poem-line">How vile to break every bone in my body,</span>
+                    <span class="poem-line">over a fall from a ledge that technically never was</span>
+                 </div>
+                 <div>
+                    <span class="poem-line">I think I must be grieving a ghost.</span>
+                </div>
+            </div>
+            <div class="drawer" onclick="event.stopPropagation()">
+                <div class="action-bar">
+                    <button class="icon-btn" id="heart-Lie" onclick="toggleHeart('Lie')"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <span class="count-text" id="l-Lie">0</span>
+                    <button class="share-btn" onclick="sharePoem('Lie')"><i
+                            class="fa-solid fa-arrow-up-from-bracket"></i></button>
+                </div>
+                <div id="cl-Lie"></div>
+                <input type="text" id="in-Lie" placeholder="..."
+                    onkeydown="if(event.key==='Enter') addComment('Lie')">
+            </div>
+        </article>
+
+        <article class="poem-card" id="rebound" onclick="togglePoem(event, 'rebound')"
+            onmouseenter="setHover('var(--rebound-img)')" onmouseleave="resetHover()">
+            <h2 class="poem-title" style="color: #f1c40f;">Rebound</h2>
+            <div class="poem-body">
+                <span class="poem-line">I was just an extra in the movie of your life—</span>
+                <span class="poem-line">a face in the crowd, a shadow at midnight</span>
+                <span class="poem-line">I had a crush on you, like a bad cough</span>
+                <span class="poem-line">But you never even noticed my existence</span>
+                <span class="poem-line">February: she was your Valentine; hand in yours</span>
+                <span class="poem-line">I looked at you for the length of the party</span>
+                <span class="poem-line">but you never felt my gaze; your eyes all for her</span>
+                <span class="poem-line">So why do I now see you everyday on my regular path?</span>
+                <span class="poem-line">Why do you now smile at me and look into my eyes?</span>
+                <span class="poem-line">Why did my phone buzz yesterday to signal your 'Hey'?</span>
+                <span class="poem-line">Why am I appearing in high definition, no longer blurred?</span>
+                <span class="poem-line">I cant wipe away the grin your 'Hey' constructed,</span>
+                <span class="poem-line">but are you only here because you've nowhere else to go?</span>
+            </div>
+            <div class="drawer" onclick="event.stopPropagation()">
+                <div class="action-bar">
+                    <button class="icon-btn" id="heart-rebound" onclick="toggleHeart('rebound')"><i
+                            class="fa-regular fa-heart"></i></button>
+                    <span class="count-text" id="l-rebound">0</span>
+                    <button class="share-btn" onclick="sharePoem('rebound')"><i
+                            class="fa-solid fa-arrow-up-from-bracket"></i></button>
+                </div>
+                <div id="cl-rebound"></div>
+                <input type="text" id="in-rebound" placeholder="..."
+                    onkeydown="if(event.key==='Enter') addComment('rebound')">
+            </div>
+        </article>
+
     </div>
-</div>
 
-<script>
-    const scrollBtn = document.getElementById('scroll-top');
-    const cursor = document.getElementById('custom-cursor');
+    <div class="footer-wrapper">
+        <div class="footer-content">
+            <p class="about-text">I find my pen braver than my mouth</p>
+            <p class="dedication">Dedicated to Karuma🙄🙄</p>
+            <div class="copyright">&copy; 2026 INK STAINS</div>
+        </div>
+    </div>
 
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
+    <script>
+        const scrollBtn = document.getElementById('scroll-top');
+        const cursor = document.getElementById('custom-cursor');
 
-    window.onscroll = function() {
-        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-            scrollBtn.style.display = "flex";
-        } else {
-            scrollBtn.style.display = "none";
-        }
-    };
-
-    let blogData = JSON.parse(localStorage.getItem('inkstains_auto')) || { poems: {}, userLikes: {} };
-
-    document.querySelectorAll('.poem-card').forEach(card => {
-        let id = card.id;
-        if (!blogData.poems[id]) {
-            blogData.poems[id] = { likes: 0, comments: [] };
-        }
-    });
-    localStorage.setItem('inkstains_auto', JSON.stringify(blogData));
-
-    function setHover(bgValue) {
-        if(bgValue.includes('img') || bgValue.includes('url')) {
-            document.body.style.backgroundImage = bgValue;
-            document.body.style.backgroundColor = "transparent";
-        } else {
-            document.body.style.backgroundImage = "none";
-            document.body.style.backgroundColor = bgValue;
-        }
-    }
-
-    function resetHover() {
-        document.body.style.backgroundImage = "var(--default-img)";
-        document.body.style.backgroundColor = "transparent";
-    }
-
-    function togglePoem(event, id) {
-        event.stopPropagation(); 
-        
-        const clickedCard = document.getElementById(id);
-        const wasAlreadyOpen = clickedCard.classList.contains('open');
-        
-        document.querySelectorAll('.poem-card').forEach(c => {
-            c.classList.remove('open');
-            c.scrollTop = 0; 
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
         });
-        
-        if (!wasAlreadyOpen) {
-            clickedCard.classList.add('open');
-        } else {
-            resetHover(); 
-        }
-    }
 
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.poem-card')) {
+        window.onscroll = function () {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                scrollBtn.style.display = "flex";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+
+        let blogData = JSON.parse(localStorage.getItem('inkstains_auto')) || { poems: {}, userLikes: {} };
+
+        document.querySelectorAll('.poem-card').forEach(card => {
+            let id = card.id;
+            if (!blogData.poems[id]) {
+                blogData.poems[id] = { likes: 0, comments: [] };
+            }
+        });
+        localStorage.setItem('inkstains_auto', JSON.stringify(blogData));
+
+        function setHover(bgValue) {
+            if (bgValue.includes('img') || bgValue.includes('url')) {
+                document.body.style.backgroundImage = bgValue;
+                document.body.style.backgroundColor = "transparent";
+            } else {
+                document.body.style.backgroundImage = "none";
+                document.body.style.backgroundColor = bgValue;
+            }
+        }
+
+        function resetHover() {
+            document.body.style.backgroundImage = "var(--default-img)";
+            document.body.style.backgroundColor = "transparent";
+        }
+
+        function togglePoem(event, id) {
+            event.stopPropagation();
+
+            const clickedCard = document.getElementById(id);
+            const wasAlreadyOpen = clickedCard.classList.contains('open');
+
             document.querySelectorAll('.poem-card').forEach(c => {
                 c.classList.remove('open');
                 c.scrollTop = 0;
             });
-            resetHover();
-        }
-    });
 
-    function updateUI() {
-        for (let id in blogData.poems) {
-            const poem = blogData.poems[id];
-            if(document.getElementById(`l-${id}`)) {
-                document.getElementById(`l-${id}`).innerText = poem.likes;
-                document.getElementById(`cl-${id}`).innerHTML = poem.comments.map((c, index) => `
+            if (!wasAlreadyOpen) {
+                clickedCard.classList.add('open');
+            } else {
+                resetHover();
+            }
+        }
+
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.poem-card')) {
+                document.querySelectorAll('.poem-card').forEach(c => {
+                    c.classList.remove('open');
+                    c.scrollTop = 0;
+                });
+                resetHover();
+            }
+        });
+
+        function updateUI() {
+            for (let id in blogData.poems) {
+                const poem = blogData.poems[id];
+                if (document.getElementById(`l-${id}`)) {
+                    document.getElementById(`l-${id}`).innerText = poem.likes;
+                    document.getElementById(`cl-${id}`).innerHTML = poem.comments.map((c, index) => `
                     <div class="comment-item">
                         <span>"${c}"</span>
                         <button class="del-btn" onclick="deleteComment('${id}', ${index})">
                             <i class="fa-solid fa-xmark"></i>
                         </button>
                     </div>`).join('');
-                
-                const heartBtn = document.getElementById(`heart-${id}`);
-                const icon = heartBtn.querySelector('i');
-                if (blogData.userLikes[id]) {
-                    heartBtn.classList.add('liked');
-                    icon.classList.replace('fa-regular', 'fa-solid');
-                } else {
-                    heartBtn.classList.remove('liked');
-                    icon.classList.replace('fa-solid', 'fa-regular');
+
+                    const heartBtn = document.getElementById(`heart-${id}`);
+                    const icon = heartBtn.querySelector('i');
+                    if (blogData.userLikes[id]) {
+                        heartBtn.classList.add('liked');
+                        icon.classList.replace('fa-regular', 'fa-solid');
+                    } else {
+                        heartBtn.classList.remove('liked');
+                        icon.classList.replace('fa-solid', 'fa-regular');
+                    }
                 }
             }
+            localStorage.setItem('inkstains_auto', JSON.stringify(blogData));
         }
-        localStorage.setItem('inkstains_auto', JSON.stringify(blogData));
-    }
 
-    function toggleHeart(id) {
-        event.stopPropagation();
-        if (blogData.userLikes[id]) {
-            blogData.poems[id].likes--;
-            delete blogData.userLikes[id];
-        } else {
-            blogData.poems[id].likes++;
-            blogData.userLikes[id] = true;
+        function toggleHeart(id) {
+            event.stopPropagation();
+            if (blogData.userLikes[id]) {
+                blogData.poems[id].likes--;
+                delete blogData.userLikes[id];
+            } else {
+                blogData.poems[id].likes++;
+                blogData.userLikes[id] = true;
+            }
+            updateUI();
         }
+
+        function addComment(id) {
+            const field = document.getElementById(`in-${id}`);
+            if (field.value.trim()) {
+                blogData.poems[id].comments.push(field.value);
+                field.value = "";
+                updateUI();
+            }
+        }
+
+        function deleteComment(poemId, commentIndex) {
+            if (confirm("Delete comment?")) {
+                blogData.poems[poemId].comments.splice(commentIndex, 1);
+                updateUI();
+            }
+        }
+
+        function sharePoem(id) {
+            event.stopPropagation();
+            const shareLink = window.location.origin + window.location.pathname + '#' + id;
+            navigator.clipboard.writeText(shareLink).then(() => {
+                alert("Sublink copied to clipboard.");
+            });
+        }
+
         updateUI();
-    }
-
-    function addComment(id) {
-        const field = document.getElementById(`in-${id}`);
-        if(field.value.trim()){
-            blogData.poems[id].comments.push(field.value);
-            field.value = "";
-            updateUI();
-        }
-    }
-
-    function deleteComment(poemId, commentIndex) {
-        if(confirm("Delete comment?")) {
-            blogData.poems[poemId].comments.splice(commentIndex, 1);
-            updateUI();
-        }
-    }
-
-    function sharePoem(id) {
-        event.stopPropagation();
-        const shareLink = window.location.origin + window.location.pathname + '#' + id;
-        navigator.clipboard.writeText(shareLink).then(() => {
-            alert("Sublink copied to clipboard.");
-        });
-    }
-
-    updateUI();
-</script>
+    </script>
 </body>
+
 </html>
